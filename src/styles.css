@@ -1,18 +1,18 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);/* You can add global styles to this file, and also import other style files */
 .lila{
     background: #692C51!important;
-    color: #fff
+    color: #fff!important
 }
 
 .azulM{
-    background: #305D7A;
-    color: #fff
+    background: #305D7A!important;
+    color: #fff!important
 }
 .borderR{
-    border-radius: 10px;
+    border-radius: 10px!important;
 }
 body{
-    background: #B0C9D9;
+    background: #B0C9D9!important;
 }
 
 .paddingCard{

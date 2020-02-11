@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       .then((res) => {
     this.Toastsuccesslogin();
         this.onLoginRedirect();
-      }).catch(err => this.Toasterrorlogin());
+      }).catch(err => console.log(err));
   }
  
 

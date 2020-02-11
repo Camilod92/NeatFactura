@@ -7,9 +7,7 @@
               <div class="card-body text-center azulM">
                 <form #formLogin="ngForm" (submit)="onLogin()" class="paddingCard">
                   <h1 class="h3 mb-3 font-weight-normal" >Iniciar Sesión</h1>
-                  <div class="alert alert-danger" role="alert">
-                    Algo ocurrio mal!!
-                  </div>
+                
                   <div class="form-group">
                     <input [(ngModel)]="email" type="email" id="email" name="email" class="form-control" placeholder="Correo electrónico" required>
                   </div>
