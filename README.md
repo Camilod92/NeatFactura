@@ -1,4 +1,10 @@
-# Neat
+# PruebaN
+Sistema de factura Angular+ Firebase
+
+Bueno lamentablemente no pude terminar todo lo que tenia en mente por falta de tiempo, para avisar de antemano me falto pulir el sistema de registro de usuario, ordenar la base de datos de facturas para mostrar en el dashboard las ultimas 8 subidas, mi intención era agregar un timestamp a sus datos para ordenar por segundos, tambien me falto agregar paginación a admin de facturas y la cloud function que no conocia mucho, ya que solo lo he usado para enviar email y cambiar el tamaño de imagenes no tenia claro como hacerlo, pero mi idea era utilizar functions.storage.object()  para detectar los cambios y enlazarla a una funcion que simulara el error con probabilidad.
+
+Bueno espero les guste lo que alcance a hacer.
+Saludos!!
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
