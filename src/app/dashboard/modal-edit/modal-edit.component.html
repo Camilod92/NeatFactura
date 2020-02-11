@@ -1,0 +1,96 @@
+<div class="modal fade" id="modalEditFactura" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"  style="background: #B0C9D9">
+        <div class="modal-header lila">
+         
+  
+          <h5 class="modal-title"  id="exampleModalLabel">
+            Actualizar factura
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form  [className]="myClass">
+         
+                <div class="form-group centerBtn">
+                  <label  class="seleccionarFactura">Factura actual: {{this.facturasdb.facturaSelected.fileName}}</label>
+                  <label  class="seleccionarFactura" for="fileEdit" >Seleccionar factura: {{nameFactura}}</label>
+                        <input class="file" id="fileEdit" #fileEdit type="file" accept=".pdf" (change)="onEditUpload($event)" required>
+                        
+                        <div class="invalid-feedback"> Debe seleccionar algún documento</div>
+                        
+                      </div>
+                      <div *ngIf="barraCargaEdit" class="progress">
+                        <div [style.visibility]="false" class="progress-bar progress-bar-striped bg-success"
+                          role="progressbar" [style.width]="(uploadPercentEdit | async) +'%'">
+                        </div>
+                      </div>
+                     <div *ngIf="urldocEdit" class="centerBtn"><button  class="mt-3 mb-3 cancelarFactura" (click)="cancelEditUpload()">Cancelar</button></div> 
+                      <input #facturaDoc type="hidden" [value]="urlFactura | async"  id="url" name="url">
+   
+          <div class="form-group col-md-6">
+                <label for="facture_name" class="col-form-label">Nombre Factura:</label>
+                <input type="text" name="facture_name" class="form-control" placeholder="Nombre de Factura" [(ngModel)]="this.facturasdb.facturaSelected.facture_name" id="facture_name" required>
+                <div class="invalid-feedback"> Debe especificar el nombre de factura</div>
+           </div>
+            <div class="form-group col-md-6">
+              <label for="facture_number" class="col-form-label">N° Factura:</label>
+              <input type="number" name="facture_number" class="form-control" placeholder="Numero de Factura" [(ngModel)]="this.facturasdb.facturaSelected.facture_number"  id="facture_number" required>
+              <div class="invalid-feedback"> Debe especificar el numero de factura</div>
+            </div>
+            <div class="form-group col-md-6">
+                    <label for="name_business" class="col-form-label">Nombre de Empresa:</label>
+                    <input type="text" name="name_business" class="form-control" placeholder="Nombre..."  [(ngModel)]="this.facturasdb.facturaSelected.name_business" id="name_business" required>
+                    <div class="invalid-feedback"> Debe especificar el nombre de Empresa</div>
+            </div>
+            <div class="form-group col-md-6">
+                    <label for="rut_business" class="col-form-label">Rut de Empresa:</label>
+                    <input type="text" name="rut_business" class="form-control" placeholder="12345678-9"  [(ngModel)]="this.facturasdb.facturaSelected.rut_business" id="rut_business" required> 
+                    <div class="invalid-feedback"> Debe especificar el rut de Empresa</div>
+             </div>
+             <div class="form-group col-md-6">
+                    <label for="name_client" class="col-form-label">Nombre de Cliente:</label>
+                    <input type="text" name="name_client" class="form-control" placeholder="Nombre..."  [(ngModel)]="this.facturasdb.facturaSelected.name_client" id="name_client" required>
+                    <div class="invalid-feedback"> Debe especificar el nombre del cliente</div>
+             </div>
+             <div class="form-group col-md-6">
+                    <label for="rut_client" class="col-form-label">Rut de Cliente:</label>
+                    <input type="text" name="rut_client" class="form-control" placeholder="12345678-9"  [(ngModel)]="this.facturasdb.facturaSelected.rut_client" id="rut_client" required>
+                    <div class="invalid-feedback"> Debe especificar el Rut del cliente</div>
+             </div>
+             <div class="form-group ">
+                    <label for="giro" class="col-form-label">Giro:</label>
+                    <input type="text" name="giro" class="form-control" placeholder="Productora..."  [(ngModel)]="this.facturasdb.facturaSelected.giro" id="giro" required>
+                    <div class="invalid-feedback"> Debe especificar el Giro</div>
+             </div>
+             <div class="form-group ">
+                    <label for="address" class="col-form-label">Dirección:</label>
+                    <input type="text" name="address" class="form-control" placeholder="Villa, Calle, N#, Ciudad"  [(ngModel)]="this.facturasdb.facturaSelected.address" id="address" required>
+                    <div class="invalid-feedback"> Debe especificar la dirección</div>
+             </div>
+        
+           
+               <div class="form-group">
+                 <div class="input-group">
+                    <input type="text"   name="date_emit" class="form-control" disabled  [ngModel]="this.facturasdb.facturaSelected.date_emit"  required>
+                   <input class="form-control" placeholder="yyyy-mm-dd"
+                          name="date_emit"  ngbDatepicker #d="ngbDatepicker" [(ngModel)]="date_emit" required>
+                          
+                   <div class="input-group-append">
+                     <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button" ><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                   </div>
+                   <div class="invalid-feedback"> Debe especificar la fecha de emisión</div>
+                 </div>
+               </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" #btnClose data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn azulM" (click)="updateFactura()">Actualizar Factura</button>
+            </div>
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>

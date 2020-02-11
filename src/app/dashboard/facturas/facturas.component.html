@@ -1,0 +1,24 @@
+<section id="facturas" class="mt-5 mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 mt-2 mb-2" *ngFor="let factura of facturas">
+          <div class="card_book">
+            <div class="card lila">
+              <div class="card-body text-center">
+                  <h4  class="card-title">Factura N°:{{factura.facture_number}}</h4>
+                  <h6  class="card-title">{{factura.facture_name}}</h6>
+                  <h6  class="card-title">Archivo:{{factura.fileName}}</h6>
+                
+                <h6  class="card-title">Empresa:{{factura.name_business}}</h6>
+                <h6  class="card-title">Rut:{{factura.rut_business}}</h6>
+                <a  class="btn azulM white"  (click)="previsualizarDocumento(factura.url)" role="button">Descargar factura</a>
+                
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  </section>

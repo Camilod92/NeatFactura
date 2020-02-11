@@ -1,0 +1,42 @@
+
+div.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+
+.marginR{
+  margin-left: 10px;
+}
+  .media
+  {
+      /*box-shadow:0px 0px 4px -2px #000;*/
+      margin: 20px 0;
+      padding:30px;
+  }
+  .dp
+  {
+      border:10px solid #692C51;
+      transition: all 0.2s ease-in-out;
+  }
+  .dp:hover
+  {
+      border:2px solid #eee;
+      transform:rotate(360deg);
+      -ms-transform:rotate(360deg);  
+      -webkit-transform:rotate(360deg);  
+      /*-webkit-font-smoothing:antialiased;*/
+  }
+
+  @media only screen and (max-width: 690px) {
+
+    .resp{
+      position: absolute;
+      top: 78%;
+      left: 10%;
+    }
+  }
+  

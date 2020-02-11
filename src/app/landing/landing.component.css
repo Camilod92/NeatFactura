@@ -1,0 +1,24 @@
+.posi{
+    position: absolute;
+    top: 10%;
+    left: 84%;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 1138px) and (min-width: 990px){
+    .posi{
+        position: absolute;
+        left: 77%;
+    }
+}
+
+@media only screen and (max-width: 989px)  {
+    .posi{
+        position: inherit;
+        padding-left: 36px;
+    }
+
+    .none{
+        display:none;
+    }
+}

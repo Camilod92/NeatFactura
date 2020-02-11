@@ -1,0 +1,44 @@
+
+<div id="profile" class="container">
+  <div *ngIf="!bienvenido" class="jumbotron jumbotron-fluid azulM borderR" style="padding: 2rem 2rem!important">
+    <div class="container">
+      <h1 class="display-5 text-center">Neat Sistema de Facturas</h1>
+      <h2 class="display-5 pl-4 pr-4 mt-4  text-center">{{userinterface.displayName}} gestiona tus facturas aquí</h2>
+    </div>
+  </div>
+<!--Bienvenida al nuevo usuario-->
+  <div *ngIf="bienvenido" class="jumbotron jumbotron-fluid azulM borderR">
+      <div class="container">
+        <h2 class="display-5 text-center">¡¡Bienvenido {{userinterface.displayName}} a nuestro sistema de gestión de facturas!!</h2>
+        <p class="pl-4 pr-4 mt-4 blockquote text-center">En este sistema podrás tener acceso desde cualquier sitio a tus facturas, podrás agregar, actualizar,
+          eliminar y descargar tus facturas.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="card azulM">
+        <div class="row">
+        <div class="col-lg-5">
+            <div class="media">
+                <a class="pull-left" >
+                    <img class="media-object dp img-circle" src="{{userinterface.photoURL}}">
+                </a>
+                <div class="media-body marginR">
+                    <h4 class="media-heading" >{{userinterface.displayName}} </h4>
+                    <h5 class="resp">{{userinterface.email}} </h5>
+                    <hr style="margin:8px auto; background: #692C51;">
+    
+                 
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    </div>
+
+    
+  </div>
+  <div>
+    <app-facturas></app-facturas>
+  </div>

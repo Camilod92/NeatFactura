@@ -1,0 +1,35 @@
+<section id="land" style="background: #fff!important">
+<!-- Nav Start -->
+<nav class="navbar navbar-expand-lg navbar-light lila theme-nav fixed-top">
+    <div>
+      <div class="none" ><span   style="display: flex;
+        flex-direction: row;" href="#land" [pageScrollOffset]="80" pageScroll><i class="fa fa-archive fax2" aria-hidden="true"></i><h4>Neat Facturas</h4></span></div>      
+    
+  
+     <!-- <a class="navbar-brand" [routerLink]="'/demo'">
+       Ingresar
+      </a>-->
+      <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon white"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse default-nav" id="navbarSupportedContent">
+     
+             <span class="nav-link white posi" href="#auth" [pageScrollOffset]="80" pageScroll><a>Inicia Sesión o Regístrate</a></span> 
+       
+      </div>
+    </div>
+  </nav>
+  <!-- Nav end-->
+
+  <app-principal></app-principal>
+  <section id="auth" style="background: #fff!important" class="mt-5">
+      <h1 class="display-4 mt-5 mb-3 text-center">Prueba nuestro sistema y hazte parte de el!!!</h1>
+  <div class="row">
+      
+    <app-login class="col-md-6 col-sm-12"></app-login>
+    <app-register class="col-md-6 col-sm-12"></app-register>
+  </div>
+</section>
+
+</section>

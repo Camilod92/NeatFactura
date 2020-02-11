@@ -1,0 +1,31 @@
+
+
+
+.white{
+    color:#fff!important;
+    font-size: 1.2rem;
+}
+
+.iconSize{
+    font-size: 1.4rem;
+    margin: 1px 10px 0px 35px;
+}
+.final{
+    position: absolute;
+    left: 88%;
+}
+    
+
+@media only screen and (max-width: 1138px) and (min-width: 990px){
+    .final{
+        position: absolute;
+        left: 86%;
+    }
+}
+@media only screen and (max-width: 989px)  {
+    .final{
+        position: inherit;
+        padding-left: 36px;
+    }
+}
+    
