@@ -23,7 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.2.1",
     "bootstrap": "^4.4.1",
     "firebase": "^7.8.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "moment": "^2.24.0",
     "ngx-page-scroll": "^7.0.0",
     "ngx-page-scroll-core": "^7.0.0",
